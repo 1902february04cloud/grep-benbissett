@@ -11,3 +11,14 @@ grep ^[^C] cities.txt
 #6
 There is probably a better way to do this
 grep -E '[A-Za-z\-]{14,}' cities.txt
+#7
+grep '^B' cities.txt -c
+#8
+Try to find a way to do without a pipe
+grep 'd' cities.txt -o | grep 'd' -c
+#9
+grep -E '(.)\1$' cities.txt
+Try to understand why that works more
+#10
+grep -Ei '^(.)(.).\2\1$' cities.txt
+Extra
